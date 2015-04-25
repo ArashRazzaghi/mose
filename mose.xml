@@ -29,39 +29,35 @@
                           <block type="movement_left" id="203"></block>
                         </statement>
                         <next>
-                          <block type="movement_stop" id="213">
+                          <block type="movement_forward" id="223">
                             <next>
-                              <block type="movement_forward" id="223">
+                              <block type="robot_delay" id="235" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="268">
+                                    <field name="NUM">1000</field>
+                                  </block>
+                                </value>
                                 <next>
-                                  <block type="robot_delay" id="235" inline="true">
-                                    <value name="DELAY">
-                                      <block type="math_number" id="268">
-                                        <field name="NUM">1000</field>
-                                      </block>
-                                    </value>
+                                  <block type="movement_forward" id="233">
                                     <next>
-                                      <block type="movement_forward" id="233">
+                                      <block type="robot_delay" id="237" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="261">
+                                            <field name="NUM">1000</field>
+                                          </block>
+                                        </value>
                                         <next>
-                                          <block type="robot_delay" id="237" inline="true">
-                                            <value name="DELAY">
-                                              <block type="math_number" id="261">
-                                                <field name="NUM">1000</field>
+                                          <block type="controls_if" id="312" inline="false">
+                                            <value name="IF0">
+                                              <block type="sensor_object" id="327">
+                                                <field name="OBJECT">LEFTFRONT</field>
                                               </block>
                                             </value>
+                                            <statement name="DO0">
+                                              <block type="movement_right" id="337"></block>
+                                            </statement>
                                             <next>
-                                              <block type="controls_if" id="312" inline="false">
-                                                <value name="IF0">
-                                                  <block type="sensor_object" id="327">
-                                                    <field name="OBJECT">LEFTFRONT</field>
-                                                  </block>
-                                                </value>
-                                                <statement name="DO0">
-                                                  <block type="movement_right" id="337"></block>
-                                                </statement>
-                                                <next>
-                                                  <block type="movement_stop" id="369"></block>
-                                                </next>
-                                              </block>
+                                              <block type="movement_stop" id="369"></block>
                                             </next>
                                           </block>
                                         </next>
