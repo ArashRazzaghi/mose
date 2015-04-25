@@ -3,8 +3,8 @@
     <next>
       <block type="controls_repeat" id="781" inline="true">
         <value name="TIMES">
-          <block type="math_number" id="810">
-            <field name="NUM">3</field>
+          <block type="math_number" id="817">
+            <field name="NUM">2</field>
           </block>
         </value>
         <statement name="DO">
@@ -93,7 +93,7 @@
                         <field name="OBJECT">BLACK</field>
                         <next>
                           <block type="oled_drawtext" id="604">
-                            <field name="TEXT">Black</field>
+                            <field name="TEXT">2 time</field>
                           </block>
                         </next>
                       </block>
