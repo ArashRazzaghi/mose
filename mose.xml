@@ -59,6 +59,42 @@
             </next>
           </block>
         </statement>
+        <next>
+          <block type="controls_repeat" id="557" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="611">
+                <field name="NUM">3</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="movement_stutter" id="567"></block>
+            </statement>
+            <next>
+              <block type="oled_setcursor" id="642" inline="true">
+                <value name="STARTX">
+                  <block type="math_number" id="720">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+                <value name="STARTY">
+                  <block type="math_number" id="727">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="oled_color" id="633">
+                    <field name="OBJECT">BLACK</field>
+                    <next>
+                      <block type="oled_drawtext" id="604">
+                        <field name="TEXT">Black</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
       </block>
     </next>
   </block>
