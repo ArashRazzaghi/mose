@@ -93,7 +93,7 @@
                         <field name="OBJECT">BLACK</field>
                         <next>
                           <block type="oled_drawtext" id="604">
-                            <field name="TEXT">2 time</field>
+                            <field name="TEXT">2nd time</field>
                           </block>
                         </next>
                       </block>
@@ -104,6 +104,29 @@
             </next>
           </block>
         </statement>
+        <next>
+          <block type="oled_cleardisplay" id="947">
+            <next>
+              <block type="oled_color" id="855">
+                <field name="OBJECT">BLACK</field>
+                <next>
+                  <block type="oled_setcursor" id="898" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="954">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="905">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
       </block>
     </next>
   </block>
