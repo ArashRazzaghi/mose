@@ -1,35 +1,32 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="1" x="13" y="26">
+  <block type="oled_cleardisplay" id="1" x="-62" y="49">
     <next>
-      <block type="movement_forward" id="111">
-        <next>
-          <block type="robot_delay" id="130" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="137">
-                <field name="NUM">1000</field>
-              </block>
-            </value>
+      <block type="controls_repeat" id="510" inline="true">
+        <value name="TIMES">
+          <block type="math_number" id="517">
+            <field name="NUM">5</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="movement_forward" id="111">
             <next>
-              <block type="movement_forward" id="147">
+              <block type="robot_delay" id="130" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="137">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="robot_delay" id="155" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="162">
-                        <field name="NUM">1000</field>
-                      </block>
-                    </value>
+                  <block type="movement_right" id="392">
                     <next>
-                      <block type="controls_if" id="193" inline="false">
-                        <value name="IF0">
-                          <block type="sensor_object" id="169">
-                            <field name="OBJECT">RIGHTFRONT</field>
+                      <block type="robot_delay" id="155" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="162">
+                            <field name="NUM">1000</field>
                           </block>
                         </value>
-                        <statement name="DO0">
-                          <block type="movement_left" id="203"></block>
-                        </statement>
                         <next>
-                          <block type="movement_forward" id="223">
+                          <block type="movement_left" id="403">
                             <next>
                               <block type="robot_delay" id="235" inline="true">
                                 <value name="DELAY">
@@ -38,7 +35,7 @@
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="movement_forward" id="233">
+                                  <block type="movement_reverse" id="382">
                                     <next>
                                       <block type="robot_delay" id="237" inline="true">
                                         <value name="DELAY">
@@ -46,21 +43,6 @@
                                             <field name="NUM">1000</field>
                                           </block>
                                         </value>
-                                        <next>
-                                          <block type="controls_if" id="312" inline="false">
-                                            <value name="IF0">
-                                              <block type="sensor_object" id="327">
-                                                <field name="OBJECT">LEFTFRONT</field>
-                                              </block>
-                                            </value>
-                                            <statement name="DO0">
-                                              <block type="movement_right" id="337"></block>
-                                            </statement>
-                                            <next>
-                                              <block type="movement_stop" id="369"></block>
-                                            </next>
-                                          </block>
-                                        </next>
                                       </block>
                                     </next>
                                   </block>
@@ -76,7 +58,7 @@
               </block>
             </next>
           </block>
-        </next>
+        </statement>
       </block>
     </next>
   </block>
